@@ -1,0 +1,228 @@
+@import './variables.scss';
+@import "./mixins.scss";
+@import "./icons.scss";
+@import "./animations.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: $default-font;
+  line-height: $default-line-height;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
+  color: $color-white;
+  background-color: $color-background;
+  transform-style: preserve-3d;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1680px;
+  padding: 20px 10vw 0 10vw;
+  overflow: hidden;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: $color-accent;
+  border-radius: 10em;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover {
+    background-color: darken($color-accent, 10);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__logo {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 24px;
+
+    & span {
+      font-weight: 300;
+      transition: .2s;
+    }
+
+    &:hover span {
+      color: $color-accent;
+    }
+  }
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 60px);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    transform-style: preserve-3d;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/images/russia.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .01;
+    z-index: $ui-index-under-1;
+  }
+}
+
+.section-description {
+  width: 30%;
+  min-width: 400px;
+  transform-style: preserve-3d;
+
+  &__title {
+    font-size: 28px;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-weight: lighter;
+    font-size: $default-font-size;
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+}
+
+.card {
+  position: relative;
+  width: 458px;
+  max-width: 90vw;
+  background-color: darken($color-accent, 10);
+  border-radius: 15px;
+  padding: 30px;
+  transform-style: preserve-3d;
+
+  & > * {
+    opacity: 0.8;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: url('../assets/images/russia.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .1;
+  }
+
+  &__logo {
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+    text-align: right;
+
+    span {
+      font-weight: lighter;
+    }
+  }
+
+  &__chip {
+    width: 120px;
+    aspect-ratio: 2 / 1;
+    background-image: url('../assets/images/chip.svg');
+    background-repeat: no-repeat;
+    opacity: .6;
+  }
+
+  &__number {
+    font-size: 24px;
+
+    span {
+      margin-right: 20px;
+    }
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &__date-params {
+    font-size: 10px;
+  }
+
+  &__cardholder {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 5px;
+  }
+
+  .substrate {
+    position: absolute;
+    inset:0;
+    z-index: -1;
+
+    &:nth-of-type(1) {
+      top: 10px;
+      left: -10px;
+      opacity: 0.4;
+    }
+
+    &:nth-of-type(2) {
+      top: 20px;
+      left: -20px;
+      opacity: 0.2;
+    }
+  }
+}
+
+.level--2 {
+  transform: translateZ(-20px);
+}
+
+.level--1 {
+  transform: translateZ(-20px);
+}
+
+.level-1 {
+  transform: translateZ(20px);
+}
+
+.level-2 {
+  transform: translateZ(40px);
+}

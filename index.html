@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>3D Card Animation</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/media.css">
+
+  <script src="js/main.js" defer></script>
+  <script src="libs/gsap/gsap.min.js" defer></script>
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__logo">Ю<span>Money</span></div>
+    <button class="button">Регистрация</button>
+  </header>
+
+  <section class="introduction">
+    <div class="introduction__wrapper">
+      <div class="section-description">
+        <h1 class="section-description__title level-2">Инновационная виртуальная карта <span>Ю</span>Money</h1>
+        <p class="section-description__text level-1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis culpa itaque libero numquam quo repudiandae sint totam voluptates, voluptatum.
+        </p>
+        <button class="button section-description__button level-2">Попробовать</button>
+      </div>
+
+      <div class="card level--1">
+        <div class="card__logo level-1">Ю<span>Money</span></div>
+        <div class="card__chip"></div>
+        <div class="card__number level-2"><span>1234</span><span>5678</span><span>9101</span><span>2311</span></div>
+        <div class="card__date level-1">
+          <div class="card__date-params">Месяц/Год</div>
+          <div class="card__date-data">12/50</div>
+        </div>
+        <div class="card__cardholder level-2">Cardholder Name</div>
+        <span class="card substrate level--1" ></span>
+        <span class="card substrate level--2" ></span>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

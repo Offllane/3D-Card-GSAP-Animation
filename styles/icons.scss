@@ -1,0 +1,45 @@
+@mixin icon($width, $height) {
+  display: block;
+  width: $width;
+  height: $height;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  object-fit: cover;
+}
+
+.connect-icon {
+  mask-image: url('../assets/icons/connect-icon.svg');
+  -webkit-mask-image: url('../assets/icons/connect-icon.svg');
+}
+
+.cross-icon {
+  mask-image: url('../assets/icons/cross-icon.svg');
+  -webkit-mask-image: url('../assets/icons/cross-icon.svg');
+}
+
+.edit-icon {
+  mask-image: url('../assets/icons/edit-icon.svg');
+  -webkit-mask-image: url('../assets/icons/edit-icon.svg');
+}
+
+.plus-icon {
+  mask-image: url('../assets/icons/plus-icon.svg');
+  -webkit-mask-image: url('../assets/icons/plus-icon.svg');
+}
+
+.download-icon {
+  mask-image: url('../assets/icons/download-icon.svg');
+  -webkit-mask-image: url('../assets/icons/download-icon.svg');
+}
+
+.upload-icon {
+  mask-image: url('../assets/icons/upload-icon.svg');
+  -webkit-mask-image: url('../assets/icons/upload-icon.svg');
+}
+
+.save-icon {
+  mask-image: url('../assets/icons/save-icon.svg');
+  -webkit-mask-image: url('../assets/icons/save-icon.svg');
+}

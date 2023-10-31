@@ -1,0 +1,30 @@
+@import "fonts.scss";
+
+$color-accent: #228FDC;
+$color-black: #101010;
+$color-white: #fff;
+$color-background: #1C1C1C;
+
+$default-font: ubuntu-st, sans-serif;
+$default-line-height: 1.65;
+$default-font-size: 18px;
+$default-font-weight: 300px;
+$additional-font: raleway-st, sans-serif;
+
+$ui-index-under-1: -1;
+$ui-index-1: 1; // using for elements that should overlap elements in standard flow
+$ui-index-2: 2; // using for elements that should overlap elements in standard flow
+$ui-index-3: 3; // using for blurred masks
+$ui-index-4: 4; // using for sidebar and header
+$ui-index-5: 5; // using for modal
+$ui-index-6: 6; // overlaps everything
+
+$ui-desktop-large: 'screen and (width >= 1400px)';
+$ui-tablet-large: 'screen and (width < 1024px)';
+$ui-tablet: 'screen and (width < 768px)';
+$ui-mobile: 'screen and (width < 480px)';
+$ui-mobile-small: 'screen and (width <= 320px)';
+
+$ui-mouse-device: '(hover: hover) and (pointer: fine)';
+$ui-touch-device: '(hover: none) and (pointer: coarse)';
+$ui-non-touch-devices: '(hover: hover) and (pointer: fine)';

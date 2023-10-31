@@ -1,0 +1,59 @@
+@font-face {
+  src: url("../assets/fonts/ubuntu-regular-webfont.woff2") format("woff2");
+  font-family: "ubuntu-st";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/ubuntu-light-webfont.woff2") format("woff2");
+  font-family: "ubuntu-st";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/ubuntu-bold-webfont.woff2") format("woff2");
+  font-family: "ubuntu-st";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/raleway-regular-webfont.woff2") format("woff2");
+  font-family: "raleway-st";
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (width < 1024px) {
+  .introduction__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media screen and (width < 768px) {
+  .introduction:before {
+    display: none;
+  }
+}
+@media screen and (width < 480px) {
+  .section-description {
+    min-width: unset;
+    width: 100%;
+  }
+  .card__logo {
+    font-size: 24px;
+  }
+  .card__chip {
+    width: 80px;
+  }
+  .card__number {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .card__date {
+    font-size: 14px;
+  }
+  .card__cardholder {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

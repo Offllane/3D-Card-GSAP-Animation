@@ -1,0 +1,260 @@
+@font-face {
+  src: url("../assets/fonts/ubuntu-regular-webfont.woff2") format("woff2");
+  font-family: "ubuntu-st";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/ubuntu-light-webfont.woff2") format("woff2");
+  font-family: "ubuntu-st";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/ubuntu-bold-webfont.woff2") format("woff2");
+  font-family: "ubuntu-st";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: url("../assets/fonts/raleway-regular-webfont.woff2") format("woff2");
+  font-family: "raleway-st";
+  font-weight: 400;
+  font-style: normal;
+}
+.connect-icon {
+  mask-image: url("../assets/icons/connect-icon.svg");
+  -webkit-mask-image: url("../assets/icons/connect-icon.svg");
+}
+
+.cross-icon {
+  mask-image: url("../assets/icons/cross-icon.svg");
+  -webkit-mask-image: url("../assets/icons/cross-icon.svg");
+}
+
+.edit-icon {
+  mask-image: url("../assets/icons/edit-icon.svg");
+  -webkit-mask-image: url("../assets/icons/edit-icon.svg");
+}
+
+.plus-icon {
+  mask-image: url("../assets/icons/plus-icon.svg");
+  -webkit-mask-image: url("../assets/icons/plus-icon.svg");
+}
+
+.download-icon {
+  mask-image: url("../assets/icons/download-icon.svg");
+  -webkit-mask-image: url("../assets/icons/download-icon.svg");
+}
+
+.upload-icon {
+  mask-image: url("../assets/icons/upload-icon.svg");
+  -webkit-mask-image: url("../assets/icons/upload-icon.svg");
+}
+
+.save-icon {
+  mask-image: url("../assets/icons/save-icon.svg");
+  -webkit-mask-image: url("../assets/icons/save-icon.svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: ubuntu-st, sans-serif;
+  line-height: 1.65;
+  font-size: 18px;
+  font-weight: 300px;
+  color: #fff;
+  background-color: #1C1C1C;
+  transform-style: preserve-3d;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1680px;
+  padding: 20px 10vw 0 10vw;
+  overflow: hidden;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #228FDC;
+  border-radius: 10em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: #1b72b0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header__logo {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 24px;
+}
+.header__logo span {
+  font-weight: 300;
+  transition: 0.2s;
+}
+.header__logo:hover span {
+  color: #228FDC;
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 60px);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.introduction__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  transform-style: preserve-3d;
+}
+.introduction:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/images/russia.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.01;
+  z-index: -1;
+}
+
+.section-description {
+  width: 30%;
+  min-width: 400px;
+  transform-style: preserve-3d;
+}
+.section-description__title {
+  font-size: 28px;
+}
+.section-description__title span {
+  color: #228FDC;
+}
+.section-description__text {
+  margin-top: 20px;
+  font-weight: lighter;
+  font-size: 18px;
+}
+.section-description__button {
+  margin-top: 30px;
+}
+
+.card {
+  position: relative;
+  width: 458px;
+  max-width: 90vw;
+  background-color: #1b72b0;
+  border-radius: 15px;
+  padding: 30px;
+  transform-style: preserve-3d;
+}
+.card > * {
+  opacity: 0.8;
+}
+.card:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("../assets/images/russia.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+.card__logo {
+  font-size: 28px;
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+}
+.card__logo span {
+  font-weight: lighter;
+}
+.card__chip {
+  width: 120px;
+  aspect-ratio: 2/1;
+  background-image: url("../assets/images/chip.svg");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+.card__number {
+  font-size: 24px;
+}
+.card__number span {
+  margin-right: 20px;
+}
+.card__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.card__date-params {
+  font-size: 10px;
+}
+.card__cardholder {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+.card .substrate {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.card .substrate:nth-of-type(1) {
+  top: 10px;
+  left: -10px;
+  opacity: 0.4;
+}
+.card .substrate:nth-of-type(2) {
+  top: 20px;
+  left: -20px;
+  opacity: 0.2;
+}
+
+.level--2 {
+  transform: translateZ(-20px);
+}
+
+.level--1 {
+  transform: translateZ(-20px);
+}
+
+.level-1 {
+  transform: translateZ(20px);
+}
+
+.level-2 {
+  transform: translateZ(40px);
+}
+
+/*# sourceMappingURL=main.css.map */
