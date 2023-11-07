@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -39,7 +40,6 @@ body {
   border-radius: 10em;
   border: none;
   color: $color-white;
-  cursor: pointer;
   transition: .2s;
 
   &:hover {
@@ -55,7 +55,6 @@ body {
 
   &__logo {
     font-weight: bold;
-    cursor: pointer;
     font-size: 24px;
 
     & span {
@@ -195,7 +194,7 @@ body {
   .substrate {
     position: absolute;
     inset:0;
-    z-index: -1;
+    z-index: $ui-index-under-1;
 
     &:nth-of-type(1) {
       top: 10px;
@@ -225,4 +224,47 @@ body {
 
 .level-2 {
   transform: translateZ(40px);
+}
+
+#cursor, #aura {
+  position: absolute;
+  border-radius: 50%;
+  transition: .5s cubic-bezier(.75,-1.27,.3,2.33) transform,
+              .2s cubic-bezier(.75,-1.27,.3,2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: $ui-index-6;
+
+  &.hidden {
+    transform: scale(.01);
+  }
+}
+
+#cursor {
+  width: 8px;
+  aspect-ratio: 1/1;
+  background-color: rgba(#fff, .5);
+  transform: scale(1);
+
+  &.active {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+#aura {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(#fff, .2);
+  background-color: rgba(#fff, .03);
+  transform: translate(5px, 5px) scale(1);
+  -webkit-backdrop-filter: invert(100%);
+  backdrop-filter: invert(100%);
+
+  &.active {
+    border: 1px solid rgba(#fff, .33);
+    background-color: rgba(#fff, .04);
+    transform: scale(1.2);
+  }
 }

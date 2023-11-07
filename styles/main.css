@@ -61,6 +61,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -92,7 +93,6 @@ body {
   border-radius: 10em;
   border: none;
   color: #fff;
-  cursor: pointer;
   transition: 0.2s;
 }
 .button:hover {
@@ -107,7 +107,6 @@ body {
 }
 .header__logo {
   font-weight: bold;
-  cursor: pointer;
   font-size: 24px;
 }
 .header__logo span {
@@ -255,6 +254,45 @@ body {
 
 .level-2 {
   transform: translateZ(40px);
+}
+
+#cursor, #aura {
+  position: absolute;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 6;
+}
+#cursor.hidden, #aura.hidden {
+  transform: scale(0.01);
+}
+
+#cursor {
+  width: 8px;
+  aspect-ratio: 1/1;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1);
+}
+#cursor.active {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#aura {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.03);
+  transform: translate(5px, 5px) scale(1);
+  -webkit-backdrop-filter: invert(100%);
+  backdrop-filter: invert(100%);
+}
+#aura.active {
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=main.css.map */
